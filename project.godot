@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mechanics_Testing"
-run/main_scene="res://Bandage/bandage.tscn"
+run/main_scene="res://BalancePuzzle/balance_puzzle.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
