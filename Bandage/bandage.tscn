@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://diplyp8g0q0lf"]
+
+[ext_resource type="Script" path="res://Bandage/bandage_scene.gd" id="1_osqdu"]
+[ext_resource type="Texture2D" uid="uid://ps1vht8b84hr" path="res://Bandage/arm.png" id="2_1hchv"]
+[ext_resource type="Texture2D" uid="uid://by0wkbu5qt0cj" path="res://Bandage/arm_mask.png" id="3_vf3at"]
+
+[node name="Bandage" type="Node2D" node_paths=PackedStringArray("markers")]
+script = ExtResource("1_osqdu")
+markers = [NodePath("Marker_1"), NodePath("Marker_2"), NodePath("Marker_3"), NodePath("Marker_4"), NodePath("Marker_5")]
+
+[node name="Arm" type="Sprite2D" parent="."]
+position = Vector2(56, -9)
+scale = Vector2(1.48978, 1.48978)
+texture = ExtResource("2_1hchv")
+
+[node name="FixedBandage" type="Node2D" parent="."]
+
+[node name="ArmMask" type="Sprite2D" parent="."]
+position = Vector2(56, -9)
+scale = Vector2(1.48978, 1.48978)
+texture = ExtResource("3_vf3at")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MoveBandage" type="Node2D" parent="."]
+
+[node name="Marker_1" type="Marker2D" parent="."]
+position = Vector2(263, 116)
+
+[node name="Marker_2" type="Marker2D" parent="."]
+position = Vector2(136, -128)
+
+[node name="Marker_3" type="Marker2D" parent="."]
+position = Vector2(20, 109)
+
+[node name="Marker_4" type="Marker2D" parent="."]
+position = Vector2(-126, -106)
+
+[node name="Marker_5" type="Marker2D" parent="."]
+position = Vector2(-232, 135)

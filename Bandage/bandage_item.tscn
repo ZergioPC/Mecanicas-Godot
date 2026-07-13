@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1aifir4hl0l8"]
+
+[ext_resource type="Texture2D" uid="uid://dnekvd6l55xmd" path="res://Bandage/bandage.jpg" id="1_kpku1"]
+[ext_resource type="Script" path="res://Bandage/bandage_item.gd" id="1_vutlu"]
+[ext_resource type="Texture2D" uid="uid://b4uais6k0mwrt" path="res://Bandage/marker.png" id="3_y5a2c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ffml8"]
+radius = 58.3095
+
+[node name="BandageItem" type="Node2D"]
+script = ExtResource("1_vutlu")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-100, -200)
+texture = ExtResource("1_kpku1")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(-4, 0, -4, 200, 204, 200, 204, 0)
+uv = PackedVector2Array(0.167622, 0.14812, -0.0220261, 199.663, 199.946, 199.865, 199.732, 0.0716534)
+bones = ["Start", PackedFloat32Array(0, 1, 1, 0), "Start/End", PackedFloat32Array(1, 0, 0, 1)]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Start" type="Bone2D" parent="Skeleton2D"]
+rotation = -1.57079
+rest = Transform2D(2.22127e-06, -1, 1, 2.22127e-06, 0, 0)
+
+[node name="End" type="Bone2D" parent="Skeleton2D/Start"]
+position = Vector2(200, -0.000444253)
+rest = Transform2D(1, 0, 0, 1, 200, -0.000444253)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Marker" type="Sprite2D" parent="Area2D"]
+position = Vector2(1, -1)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("3_y5a2c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ffml8")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
