@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1317nttmnedp"]
+
+[ext_resource type="Script" path="res://ToHarmer/nail.gd" id="1_bjm0w"]
+[ext_resource type="Texture2D" uid="uid://d3fuyb1lkt4bo" path="res://ToHarmer/nail.png" id="1_vadmx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xe8jj"]
+radius = 48.5077
+
+[node name="Nail" type="Node2D"]
+script = ExtResource("1_bjm0w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("1_vadmx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_xe8jj")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
