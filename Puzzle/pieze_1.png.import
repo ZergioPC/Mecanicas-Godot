@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r12dm0ud2735"
-path="res://.godot/imported/pieze_2.png-b84325e3e1305871c3e8625951b9cd51.ctex"
+uid="uid://bg6unmtptqeyr"
+path="res://.godot/imported/pieze_1.png-a95b074c3c31e55267016e23ec78230d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BalancePuzzle/pieze_2.png"
-dest_files=["res://.godot/imported/pieze_2.png-b84325e3e1305871c3e8625951b9cd51.ctex"]
+source_file="res://Puzzle/pieze_1.png"
+dest_files=["res://.godot/imported/pieze_1.png-a95b074c3c31e55267016e23ec78230d.ctex"]
 
 [params]
 

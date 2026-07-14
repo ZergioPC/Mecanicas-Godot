@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce24f4kghe4p0"]
+
+[ext_resource type="Script" path="res://Puzzle/puzzle.gd" id="1_cpolr"]
+[ext_resource type="Texture2D" uid="uid://dto6hwqqv3maa" path="res://Puzzle/borard.png" id="2_vs8f1"]
+[ext_resource type="PackedScene" uid="uid://d3gsgi0i44bbr" path="res://Puzzle/puzzle_item.tscn" id="3_6081p"]
+[ext_resource type="Texture2D" uid="uid://bg6unmtptqeyr" path="res://Puzzle/pieze_1.png" id="4_ixkfh"]
+[ext_resource type="Texture2D" uid="uid://r12dm0ud2735" path="res://Puzzle/pieze_2.png" id="5_pyp53"]
+[ext_resource type="Texture2D" uid="uid://cfatnmxw4obgk" path="res://Puzzle/pieze_3.png" id="6_ep7sf"]
+
+[node name="BalancePuzzle" type="Node2D" node_paths=PackedStringArray("markers")]
+script = ExtResource("1_cpolr")
+markers = [NodePath("Node2D/P1"), NodePath("Node2D/P2"), NodePath("Node2D/P3")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Borard" type="Sprite2D" parent="."]
+position = Vector2(0, 20)
+scale = Vector2(0.78636, 0.78636)
+texture = ExtResource("2_vs8f1")
+
+[node name="PIEZAS" type="Node2D" parent="."]
+
+[node name="Pieza1" parent="PIEZAS" instance=ExtResource("3_6081p")]
+position = Vector2(163, -48)
+piece_sprite = ExtResource("4_ixkfh")
+piece_scale = 0.786
+hitbox_radio = 3
+
+[node name="Pieza2" parent="PIEZAS" instance=ExtResource("3_6081p")]
+position = Vector2(77, 150)
+piece_sprite = ExtResource("5_pyp53")
+piece_scale = 0.786
+hitbox_radio = 3
+
+[node name="Pieza3" parent="PIEZAS" instance=ExtResource("3_6081p")]
+position = Vector2(-151, 23)
+piece_sprite = ExtResource("6_ep7sf")
+piece_scale = 0.786
+hitbox_radio = 3
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="P1" type="Marker2D" parent="Node2D"]
+position = Vector2(-489, -251)
+
+[node name="P2" type="Marker2D" parent="Node2D"]
+position = Vector2(-489, 0)
+
+[node name="P3" type="Marker2D" parent="Node2D"]
+position = Vector2(466, -251)

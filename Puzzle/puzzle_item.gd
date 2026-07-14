@@ -11,6 +11,7 @@ extends Node2D
 
 var is_hovered : bool = false
 var is_correct : bool = false
+var is_complete : bool = false
 var is_moving : bool = false
 var can_move : bool = true
 
@@ -39,6 +40,7 @@ func _process(delta: float) -> void:
 		sprite.position = Vector2.ZERO
 		balance_puzle_correct.emit()
 		can_move = false
+		is_complete = true
 
 # SIGNALS
 
@@ -53,4 +55,5 @@ func _on_pieze_hole_box_mouse_entered() -> void:
 	is_correct = true
 
 func _on_pieze_hole_box_mouse_exited() -> void:
-	is_correct = false
+	if !is_complete :
+		is_correct = false

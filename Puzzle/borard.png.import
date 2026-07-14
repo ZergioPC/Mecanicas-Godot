@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg6unmtptqeyr"
-path="res://.godot/imported/pieze_1.png-b7d44da81be5af4a2dfca8651fab1ed9.ctex"
+uid="uid://dto6hwqqv3maa"
+path="res://.godot/imported/borard.png-cd0cd0c2c9b7dcfd295930dbe8794ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BalancePuzzle/pieze_1.png"
-dest_files=["res://.godot/imported/pieze_1.png-b7d44da81be5af4a2dfca8651fab1ed9.ctex"]
+source_file="res://Puzzle/borard.png"
+dest_files=["res://.godot/imported/borard.png-cd0cd0c2c9b7dcfd295930dbe8794ff5.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3gsgi0i44bbr"]
 
-[ext_resource type="Script" path="res://BalancePuzzle/balance_puzzle_item.gd" id="1_51twf"]
+[ext_resource type="Script" path="res://Puzzle/puzzle_item.gd" id="1_51twf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y74wb"]
 

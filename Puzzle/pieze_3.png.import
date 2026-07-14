@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfatnmxw4obgk"
-path="res://.godot/imported/pieze_3.png-ba246806ec0ef0a68f3a8ac0b1b5eaef.ctex"
+path="res://.godot/imported/pieze_3.png-c28de2ba2514018b0438d23eed2ee4fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BalancePuzzle/pieze_3.png"
-dest_files=["res://.godot/imported/pieze_3.png-ba246806ec0ef0a68f3a8ac0b1b5eaef.ctex"]
+source_file="res://Puzzle/pieze_3.png"
+dest_files=["res://.godot/imported/pieze_3.png-c28de2ba2514018b0438d23eed2ee4fb.ctex"]
 
 [params]
 
